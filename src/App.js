@@ -3,23 +3,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 
 function App() {
-  const API_URL = "http://localhost:3500/students"
-  const [students, setStudents] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null)
-   
-  useEffect(() =>{
-    const getData = async()=>{
-      const response = await fetch(API_URL)
-      
-      const student_list = await response.json()
-      
-      setStudents(student_list)
-      console.log(students)
-    }
-    getData()
-
-  }, [])
+  
 
 
 
