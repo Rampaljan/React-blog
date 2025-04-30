@@ -20,7 +20,7 @@ return(
       <Route exact path="/post" element={<PostPage />} />
       <Route path="/newpost" element={<NewPost />} />
       <Route path="/about" element={<About />} />
-      <Route path="/missing" element={<Missing />} />
+      <Route path="*" element={<Missing />} />
     </Routes>
     <Footer />
   </div>
