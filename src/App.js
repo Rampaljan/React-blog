@@ -38,13 +38,14 @@ const App = () => {
       body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequatur expedita, assumenda similique non optio! Modi nesciunt excepturi corrupti atque blanditiis quo nobis, non optio quae possimus illum exercitationem ipsa!"
     }
   ])
+  const [searchResults, setSearchResults] = useState([]);
 
 return(
   <div className="App">
     <Header  title="React blog" />
-    <Nav />
+    <Nav search = {search} setSearch={setSearch}/>
     <Routes>
-      <Route exact path="/" element={<Home/>} />
+      <Route exact path="/" element={<Home posts = {posts}/>} />
       <Route exact path="/post" element={<PostPage />} />
       <Route path="/newpost" element={<NewPost />} />
       <Route path="/about" element={<About />} />
